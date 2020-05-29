@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".MainActivity">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:gravity="center_horizontal"
+            android:text="Parles-tu le toulousain?"
+            android:textSize="30sp" />
+
+        <TextView
+            style="@style/questions"
+            android:text="1 . Complète l'expression: &quot;Boudu..&quot;" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:hint="réponse"
+            android:id="@+id/first_answer"/>
+
+        <TextView
+            style="@style/questions"
+            android:text="2 . Ceci s'appelle:" />
+
+        <ImageView
+            android:layout_width="206dp"
+            android:layout_height="149dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="16dp"
+            android:src="@drawable/choco" />
+
+        <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/radio_chocolatine"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="une chocolatine" />
+
+            <RadioButton
+                android:id="@+id/radio_pain_chocolat"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="un pain au chocolat"/>
+        </RadioGroup>
+
+        <TextView
+            style="@style/questions"
+            android:text="3 . Selectionne les expressions toulousaines:" />
+
+        <CheckBox
+            android:id="@+id/answer3_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Voulez-vous une poche pour mettre vos achats?" />
+
+        <CheckBox
+            android:id="@+id/answer3_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Zut, j'ai un impact sur ma voiture" />
+
+        <CheckBox
+            android:id="@+id/answer3_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Mais putain con! J'ai un pét sur ma caisse" />
+
+        <CheckBox
+            android:id="@+id/answer3_4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nan mais quel ratchous ce mec!" />
+
+        <CheckBox
+            android:id="@+id/answer3_5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:text="Il n'est pas d'une grande générosité" />
+
+        <TextView
+            style="@style/questions"
+            android:text="4. Aimes-tu les bordelais?" />
+
+        <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/radio_bordelais_oui"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="oui" />
+
+            <RadioButton
+                android:id="@+id/radio_bordelais_non"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="non"/>
+        </RadioGroup>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Valider"
+            android:gravity="center_horizontal"
+            android:textAllCaps="true"
+            android:onClick="submitQuizz"/>
+
+    </LinearLayout>
+</ScrollView>
